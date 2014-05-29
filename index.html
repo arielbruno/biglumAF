@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+	<!-- <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css"> -->
+	<!--   
+   You may substitute jQuery for the App Framework selector library.
+   See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+  -->
+	<!-- content goes here-->
+	<!-- <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css"> -->
+	<!--   
+   You may substitute jQuery for the App Framework selector library.
+   See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+  -->
+	<!-- content goes here-->
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css">
+		<link rel="stylesheet" type="text/css" href="app_framework/2.1/css/af.ui.min.css">
+		<!-- <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/icons.css">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+		<title>BigLum</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+		<style type="text/css">
+			/* Prevent copy paste for all elements except text fields */
+			*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+			input, textarea  { -webkit-user-select:text; }
+		</style>
+		<script src="intelxdk.js"></script>
+		<script type="text/javascript">
+			/* Intel native bridge is available */
+						var onDeviceReady=function(){
+                            //$.ui.useOsThemes
+						//hide splash screen
+						intel.xdk.device.hideSplashScreen();
+                            
+						};
+						document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+		</script>
+		<script src="cordova.js"></script>
+		<!--   
+   You may substitute jQuery for the App Framework selector library.
+   See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+  -->
+		<script type="application/javascript" src="app_framework/2.1/appframework.js"></script>
+		<script type="application/javascript" src="app_framework/2.1/appframework.ui.js" data-ver="1"></script>
+		<script type="application/javascript" src="js/jquery.min.js"></script>
+		<script type="application/javascript" src="js/index_user_scripts.js"></script>
+		<script type="application/javascript" src="js/af_subpage.js"></script>
+		<script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+		<script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+		<script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+		<script type="application/javascript" src="sidebar/js/swipe.js"></script>
+	</head>
+
+	<body id="afui" class="bodyBackground">
+
+		<!-- content goes here-->
+		<div class="uwrap" id="content">
+			<div class="upage panel bodyBg" id="mainpage" data-header="none" data-footer="none">
+				<div class="upage-outer">
+					<div class="upage-content bodyBg" id="mainsub">
+
+						<form class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+							<center>
+								<div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+									<div class="widget-container content-area vertical-col">
+
+										<div class="widget uib_w_3 d-margins logoLogin" data-uib="media/img" data-ver="0">
+											<figure class="figure-align">
+												<img src="imagenes/logo.png">
+												<figcaption data-position="bottom"></figcaption>
+											</figure>
+										</div>
+										<center>
+											<div class="widget uib_w_4 d-margins corpLogin" data-uib="media/img" data-ver="0">
+												<figure class="figure-align">
+													<img src="imagenes/imagen.png">
+													<figcaption data-position="bottom"></figcaption>
+												</figure>
+											</div>
+										</center>
+										<div class="table-thing with-label widget uib_w_1 d-margins width-input-r" data-uib="app_framework/input" data-ver="1">
+											<input class="wide-control" type="text" placeholder="Mail" id="usrLogin">
+										</div>
+										<div class="table-thing with-label widget uib_w_2 d-margins width-input-r" data-uib="app_framework/input" data-ver="1">
+											<input class="wide-control" type="password" placeholder="Contraseña" id="pswLogin">
+										</div><a href="#cotizar" class="button widget uib_w_5 d-margins yellow width-button-r" data-uib="app_framework/button" data-ver="1" onclick="ahorrar()">Ahorrar!</a>
+										<hr style="margin:5px;">
+										<a class="icon user-3" href="#registrarse" data-uib="app_framework/button" data-ver="1" id="btnRegistrarse" style="text-decoration:none;color:#222;padding:5px;">Registrarse</a>
+										<span class="uib_shim"></span>
+									</div>
+								</div>
+							</center>
+							<span class="uib_shim"></span>
+						</form>
+					</div>
+					<!-- /upage-content -->
+
+				</div>
+				<!-- /upage-outer -->
+
+			</div>
+			<div class="upage panel bodyBg" id="registrarse" data-header="none" data-footer="af-footer-0">
+				<div class="upage-outer">
+					<div id="registrarsesub" class="upage-content">
+
+						<div class="grid grid-pad urow uib_row_7 row-height-7" data-uib="layout/row" data-ver="0">
+							<div class="col uib_col_9 col-0_12-12" data-uib="layout/col" data-ver="0">
+								<center>
+									<div class="widget-container content-area vertical-col">
+
+										<div class="widget uib_w_29 d-margins" data-uib="media/text" data-ver="0">
+											<div class="widget-container left-receptacle"></div>
+											<div class="widget-container right-receptacle"></div>
+											<div>
+												<h2 style="text-align:center;"><r style="color:#666">Registrate</r> <r style="color:#F8C300;background-color:#666;padding:8px;border-radius:8px;">YA!</r></h2>
+											</div>
+										</div>
+										<div class="table-thing with-label widget uib_w_22 d-margins width-input-r" data-uib="app_framework/input" data-ver="1">
+											<input class="wide-control" placeholder="Nombre y Apellido" type="text" id="regNombreApellido">
+										</div>
+										<div class="table-thing with-label widget uib_w_23 d-margins width-input-r" data-uib="app_framework/input" data-ver="1">
+											<input class="wide-control" placeholder="Mail" type="text" id="regMail">
+										</div>
+										<div class="table-thing with-label widget uib_w_24 d-margins width-input-r" data-uib="app_framework/input" data-ver="1">
+											<input class="wide-control" placeholder="Contraseña" type="text" id="regPassword">
+										</div>
+										<div class="table-thing with-label widget uib_w_28 d-margins width-input-r" data-uib="app_framework/input" data-ver="1">
+											<input class="wide-control" placeholder="Confirmar Contraseña" type="password" id="regConfirmaPassword">
+										</div><span class="uib_shim"></span>
+									</div>
+								</center>
+							</div>
+							<span class="uib_shim"></span>
+						</div>
+					</div>
+					<footer class="inner-element uib_w_25" data-uib="app_framework/footer" data-ver="1" id="af-footer-0">
+						<a href="#mainpage" class="widget uib_w_26 d-margins icon close" data-uib="app_framework/button" data-ver="1">Más Tarde</a>
+						<a class="widget uib_w_27 d-margins icon check" data-uib="app_framework/button" data-ver="1">Registrarse</a>
+					</footer>
+				</div>
+				<!-- /upage-outer -->
+			</div>
+			<div class="upage panel bodyBg" id="info" data-header="none" data-footer="footerGeneral">
+				<div class="upage-outer">
+					<div id="infosub" class="upage-content ">
+
+						<div class="grid grid-pad urow uib_row_4 row-height-4" data-uib="layout/row" data-ver="0">
+							<div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
+								<div class="widget-container content-area vertical-col">
+									<center>
+
+										<div class="widget uib_w_19 scale-image d-margins" data-uib="media/img" data-ver="0">
+
+											<figure class="figure-align">
+												<img src="imagenes/comprar_vender.png">
+												<figcaption data-position="bottom"></figcaption>
+											</figure>
+										</div>
+										<p style="font-size:150%">Recibe las mejores cotizaciones de los productos o servicios que necesitas adquirir y cotiza a los compradores que necesitan todo lo que comercializas.</p>
+										<div class="widget uib_w_20 scale-image d-margins" data-uib="media/img" data-ver="0">
+											<figure class="figure-align">
+												<img src="imagenes/Programa_referidos_1.png">
+												<figcaption data-position="bottom"></figcaption>
+											</figure>
+										</div>
+										<p style="font-size:150%">Recomienda y comparte BIGLUM.COM con todos tus amigos o clientes y recibe altos ingresos mensuales por cada uno de tus referidos directos e indirectos.</p>
+										<span class="uib_shim"></span>
+
+									</center>
+								</div>
+							</div>
+							<span class="uib_shim"></span>
+						</div>
+					</div>
+				</div>
+				<!-- /upage-outer -->
+			</div>
+			<div class="upage panel bodyBg" id="cotizaciones" data-header="none" data-footer="footerGeneral">
+				<div class="upage-outer">
+					<div id="cotizacionessub" class="upage-content ">
+						<div class="col uib_col_8 col-0_12-12" data-uib="layout/col" data-ver="0">
+							<div style="padding-top:8px;padding-left:15px;padding-right:15px;">
+								<input class="wide-control" type="text" placeholder="Buscar...">
+							</div>
+							<div class="widget-container content-area vertical-col">
+								<div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0" style="padding-right:0px;">
+									<div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+										<div class="widget-container content-area vertical-col left">
+
+											<ul class="list widget uib_w_15 d-margins" data-uib="app_framework/listview" data-ver="1">
+												<li class="widget uib_w_16" data-uib="app_framework/listitem" data-ver="1"><a><h4>Bicicleta</h4>Mountain Bike Rodado 18</a>
+												</li>
+												<li class="widget uib_w_17" data-uib="app_framework/listitem" data-ver="1"><a><h4>Cafetera</h4>Filtro Marca Philips</a>
+												</li>
+												<li class="widget uib_w_18" data-uib="app_framework/listitem" data-ver="1"><a><h4>Sillón</h4>Tapizado de Cuero</a>
+												</li>
+											</ul><span class="uib_shim"></span>
+										</div>
+									</div>
+									<span class="uib_shim"></span>
+								</div><span class="uib_shim"></span>
+							</div>
+						</div>
+						<span class="uib_shim"></span>
+
+					</div>
+				</div>
+				<!-- /upage-outer -->
+			</div>
+
+			<div class="upage panel bodyBg" id="cotizar" data-header="none" data-footer="footerGeneral" data-nav="sideMenu">
+				<div class="upage-outer">
+
+					<div id="cotizarsub" class="upage-content ">
+
+						<div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+							<div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+								<center>
+									<div class="widget-container content-area vertical-col">
+
+										<div class="widget uib_w_6 d-margins" data-uib="media/text" data-ver="0">
+											<div class="widget-container left-receptacle"></div>
+											<div class="widget-container right-receptacle"></div>
+											<div>
+												<p>¿Que necesitas comprar?</p>
+											</div>
+										</div>
+										<div class="table-thing with-label widget uib_w_7 d-margins width-input-r" data-uib="app_framework/textarea" data-ver="1">
+											<textarea class="wide-control" placeholder="Describe el producto o servicio que necesitas y recibe las mejores cotizaciones." rows="8" wrap="soft" id="comprarDescri"></textarea>
+										</div>
+										<div class="table-thing with-label widget uib_w_8 d-margins width-input-r" data-uib="app_framework/input" data-ver="1">
+											<input class="wide-control" type="text" id="comprarCantid" placeholder="Cantidad">
+										</div><a class="button widget uib_w_9 d-margins yellow width-button-r" data-uib="app_framework/button" data-ver="1" data-transition="fade">Enviar Solicitud</a><span class="uib_shim"></span>
+									</div>
+								</center>
+							</div>
+							<span class="uib_shim"></span>
+						</div>
+					</div>
+
+					<footer class="inner-element uib_w_10" data-uib="app_framework/footer" data-ver="1" id="footerGeneral">
+						<a href="#cotizar" data-transition="slide" class="widget uib_w_12 d-margins icon cart-2" data-uib="app_framework/button" data-ver="1">Comprar</a>
+						<a href="#cotizaciones" class="widget uib_w_13 d-margins icon stack" data-uib="app_framework/button" data-ver="1">Cotizaciones</a>
+						<a href="#info" class="widget uib_w_14 d-margins icon info" data-uib="app_framework/button" data-ver="1">+ info</a>
+					</footer>
+
+				</div>
+				<!-- /upage-outer -->
+			</div>
+			<!-- /upage -->
+		</div>
+		<div id="sideBar" class="inner-element uib_w_21 uib_sidebar leftbar bar-bg fixed" data-uib="layout/left_sidebar" data-ver="0" style="z-index:200" data-anim="{'style':'overlap', 'v':200, 'side':'left'}">
+			<div class="sidebar-content">
+				<div class="grid grid-pad urow uib_row_6 row-height-6" data-uib="layout/row" data-ver="0">
+					<div class="col uib_col_6 col-0_12-12" data-uib="layout/col" data-ver="0">
+						<div class="widget-container content-area vertical-col">
+							<h1 style="" onclick="toggleSideBar()"><r style="color:#fff;">Big</r><r style="color:#F8C300;">Lum</r><r class="icon arrow-left" style="float:right;font-size:70%;color:#fff;"></r></h1>
+						</div>
+					</div>
+					<span class="uib_shim"></span>
+				</div>
+				<div class="grid grid-pad urow uib_row_6 row-height-6" data-uib="layout/row" data-ver="0">
+					<div class="col uib_col_6 col-0_12-12" data-uib="layout/col" data-ver="0">
+						<div class="widget-container content-area vertical-col">
+							<a style="text-decoration:none;"><h3 class="icon smiley" style="color:#fff; padding: 10px;">Perfil</h3></a>
+                            <a href="#mainpage" onclick="btnSalir()" style="text-decoration:none;"><h3 class="icon sad" style="color:#fff; padding: 10px;">Salir</h3></a>
+						</div>
+					</div>
+					<span class="uib_shim"></span>
+				</div>
+			</div>
+		</div>
+		<i id="btnToggleSideBar" onclick="toggleSideBar()" class="icon menu" style="color:#fff;font-weight:normal; font-size:130%; position:fixed; top:0px; left:-2px; z-index:200; background-color: #000; padding:3px; opacity:.6;border-top-right-radius:5px;border-bottom-right-radius:5px; display:none;"></i>
+		<!-- /uwrap -->
+	</body>
+
+</html>
